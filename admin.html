@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>HR Portal</h2>
+            </div>
+
+            <nav>
+                <a href="admin.html" class="active">Dashboard</a>
+                <a href="employee.html">Employees</a>
+                <a href="departments.html">Departments</a> 
+                <a href="#">Announcements</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back to your HR Management Portal</p>
+                </div>
+            </header>
+
+            <section class="stats">
+
+                <div class="stat-card">
+                    <h3>Total Employees</h3>
+                    <p id="totalEmployees">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Departments</h3>
+                    <p id="totalDepartments">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Active Employees</h3>
+                    <p id="activeEmployees">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Announcements</h3>
+                    <p id="totalAnnouncements">0</p>
+                </div>
+
+            </section>
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Employees</h2>
+                        <p>Manage employee information and records.</p>
+                    </div>
+
+                    <div>
+                        <input type="text" id="searchInput" placeholder="Search employee...">
+
+                        <select id="departmentFilter">
+                            <option value="">All Departments</option>
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                        </select>
+
+                        <button id="addEmployeeBtn">Add Employee</button>
+
+                    </div>
+                </div>
+
+                <div class="employee-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Designation</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="employeeTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- edit form -->
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Edit Employee</h2>
+                <button id="closeEditModal">&times;</button>
+            </div>
+
+            <form id="editEmployeeForm">
+
+                <label for="editName">Name</label>
+                <input type="text" id="editName">
+
+                <label for="editEmail">Email</label>
+                <input type="email" id="editEmail">
+
+                <label for="editDepartment">Department</label>
+                <select id="editDepartment">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Finance">Finance</option>
+                </select>
+
+                <label for="editDesignation">Designation</label>
+                <input type="text" id="editDesignation">
+
+                <label for="editStatus">Status</label>
+                <select id="editStatus">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancelEdit">Cancel</button>
+                    <button type="submit">Save Changes</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- add New Employee form -->
+
+    <div id="addEmployeeModal" class="modal">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Add Employee</h2>
+                <button id="closeAddEmployeeModal">&times;</button>
+            </div>
+
+            <form id="addEmployeeForm">
+
+                <label for="addName">Name</label>
+                <input type="text" id="addName">
+
+                <label for="addEmail">Email</label>
+                <input type="email" id="addEmail">
+
+                <label for="addDepartment">Department</label>
+                <select id="addDepartment">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Finance">Finance</option>
+                </select>
+
+                <label for="addDesignation">Designation</label>
+                <input type="text" id="addDesignation">
+
+                <label for="addStatus">Status</label>
+                <select id="addStatus">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancelAddEmployee">Cancel</button>
+                    <button type="submit">Add Employee</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
