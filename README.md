@@ -96,6 +96,25 @@ This project was created to practice building a practical business application u
 
 It demonstrates how frontend technologies can be used to create an HR-style management interface.
 
+## Screenshots
+
+### Dashboard
+
+![Employee Management System Dashboard](./screenshots/dashboard.png)
+
+### Employee Management
+
+![Employee Management](./screenshots/employees.png)
+
+### Employee Form
+
+![Employee Form](./screenshots/employee-form.png)
+
+### Main Interface
+
+![Main Interface](./screenshots/index.png)
+
+
 ## Future Improvements
 
 * Backend integration
